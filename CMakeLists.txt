@@ -6,4 +6,4 @@ set(CMAKE_CXX_STANDARD 14)
 include_directories(.)
 
 add_executable(console_rougelike_game
-        main.cpp)
+        main.cpp objects/GameObject.h objects/structures.h objects/Character.h objects/Knight.cpp objects/Knight.h)
