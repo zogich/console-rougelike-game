@@ -8,4 +8,13 @@ typedef struct Point{
     int x;
     int y;
 }Point;
+typedef struct TileMap{
+    Point pos{};
+    char sym;
+    TileMap(Point position, char symbol) {
+        this->pos = position;
+        this->sym = symbol;
+    };
+}TileMap;
+
 #endif //CONSOLE_ROUGELIKE_GAME_STRUCTURES_H

@@ -1,6 +1,9 @@
 #include "iostream"
+#include "objects/Map.h"
+#include <iostream>
 
 int main(){
-    std::cout << "HELLO WORLD"<< std::endl;
+    Map map("/Users/ivan/Desktop/egor_learning/github/console-rougelike-game/map.txt");
+    std::cout << map << std::endl;
     return 0;
 }
