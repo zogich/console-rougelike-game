@@ -9,6 +9,7 @@
 class Princess : public Character{
 public:
     Princess(const Point &pos);
+    void TakeDamage(const int &damage) override;
 };
 
 

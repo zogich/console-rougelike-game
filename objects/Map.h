@@ -14,7 +14,7 @@ private:
 public:
     Map(const std::string &path_to_config_file);
     std::vector<std::vector<TileMap>> getTiles() const;
-
+    
 };
 std::ostream& operator << (std::ostream &os, const Map &map);
 

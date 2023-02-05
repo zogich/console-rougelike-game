@@ -8,3 +8,7 @@ Princess::Princess(const Point &pos) {
     this->SetSym('P');
     this->SetPos(pos);
 }
+
+void Princess::TakeDamage(const int &damage) {
+    return;
+}
