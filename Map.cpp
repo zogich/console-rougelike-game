@@ -9,6 +9,12 @@
 Map::Map(const std::string &path_to_config_file) {
     std::ifstream file(path_to_config_file);
     std::string line;
+    this->wall_factory = std::make_unique<WallFactory>();
+    this->knight_factory = std::make_unique<KnightFactory>();
+    this->zombie_factory = std::make_unique<ZombieFactory>();
+    this->dragon_factory = std::make_unique<DragonFactory>();
+    this->princess_factory = std::make_unique<PrincessFactory>();
+
     int line_count = 0;
     while (getline(file, line)){
         int column_count = 0;

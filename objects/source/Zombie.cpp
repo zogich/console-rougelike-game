@@ -2,7 +2,7 @@
 // Created by иван on 30.01.2023.
 //
 
-#include "Zombie.h"
+#include "objects/Objects.h"
 
 Zombie::Zombie(const Point &pos) {
     this->SetSym('Z');

@@ -2,7 +2,7 @@
 // Created by иван on 29.01.2023.
 //
 
-#include "Knight.h"
+#include "objects/Objects.h"
 Knight::Knight(const Point &pos) {
     this->SetSym('K');
     this->SetPos(pos);

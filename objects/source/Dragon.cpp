@@ -2,8 +2,7 @@
 // Created by иван on 30.01.2023.
 //
 
-#include "Dragon.h"
-
+#include "objects/Objects.h"
 Dragon::Dragon(const Point &pos) {
     this->SetSym('D');
     this->SetPos(pos);

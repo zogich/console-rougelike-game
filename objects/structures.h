@@ -8,6 +8,7 @@ typedef struct Point{
     int x;
     int y;
 }Point;
+
 typedef struct TileMap{
     Point pos{};
     char sym;

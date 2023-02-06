@@ -2,7 +2,7 @@
 // Created by иван on 30.01.2023.
 //
 
-#include "Princess.h"
+#include "objects/Objects.h"
 
 Princess::Princess(const Point &pos) {
     this->SetSym('P');
