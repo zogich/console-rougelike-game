@@ -3,10 +3,6 @@
 //
 
 #include "Factorys.h"
-#include "objects/Knight.h"
-#include "objects/Zombie.h"
-#include "objects/Dragon.h"
-#include "objects/Princess.h"
 
 
 std::unique_ptr<GameObject> KnightFactory::createProduct(const Point &pos) {
@@ -23,4 +19,8 @@ std::unique_ptr<GameObject> DragonFactory::createProduct(const Point &pos) {
 
 std::unique_ptr<GameObject> PrincessFactory::createProduct(const Point &pos) {
     return std::make_unique<Princess>(pos);
+}
+
+std::unique_ptr<GameObject> WallFactory::createProduct(const Point &pos) {
+    return std::make_unique<Wall>(pos);
 }

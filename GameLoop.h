@@ -4,9 +4,6 @@
 #define CONSOLE_ROUGELIKE_GAME_GAMELOOP_H
 #include <vector>
 #include <memory>
-#include "Character.h"
-#include "Knight.h"
-#include "Princess.h"
 #include "Map.h"
 
 class GameLoop {

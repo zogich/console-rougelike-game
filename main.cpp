@@ -1,5 +1,5 @@
 #include "iostream"
-#include "objects/Map.h"
+#include "Map.h"
 #include <iostream>
 
 int main(){
