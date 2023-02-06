@@ -9,13 +9,13 @@ typedef struct Point{
     int y;
 }Point;
 
-typedef struct TileMap{
+typedef struct Tile{
     Point pos{};
     char sym;
-    TileMap(Point position, char symbol) {
+    Tile(Point position, char symbol) {
         this->pos = position;
         this->sym = symbol;
     };
-}TileMap;
+}Tile;
 
 #endif //CONSOLE_ROUGELIKE_GAME_STRUCTURES_H
