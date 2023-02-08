@@ -1,5 +1,5 @@
-
 #include "objects/structures.h"
+
 
 class GameObject {
 private:

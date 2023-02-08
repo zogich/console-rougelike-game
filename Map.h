@@ -7,16 +7,12 @@
 #include <vector>
 #include <memory>
 #include "objects/structures.h"
-#include "Factorys.h"
+#include "Factory.h"
 
 class Map {
 private:
     std::vector<std::vector<Tile>> tiles;
-    std::unique_ptr<KnightFactory> knight_factory;
-    std::unique_ptr<ZombieFactory> zombie_factory;
-    std::unique_ptr<DragonFactory> dragon_factory;
-    std::unique_ptr<PrincessFactory> princess_factory;
-    std::unique_ptr<WallFactory> wall_factory;
+    std::unique_ptr<Factory> factory;
 public:
     Map(const std::string &path_to_config_file);
     std::vector<std::vector<Tile>> getTiles() const;
