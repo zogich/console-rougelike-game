@@ -6,6 +6,7 @@
 #include <map>
 #include "objects/Objects.h"
 
+
 class AbstractCreator {
 public:
     virtual std::unique_ptr<GameObject> Create(const Point &pos) = 0;

@@ -8,10 +8,8 @@
 
 class GameLoop {
 private:
-    std::vector<std::unique_ptr<Character>> monsters;
-    std::unique_ptr<Knight> knight;
-    std::unique_ptr<Princess> princess;
     std::unique_ptr<Map> map;
+    objectPool *pool;
 public:
     GameLoop();
     void startLoop();

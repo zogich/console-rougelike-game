@@ -4,6 +4,8 @@
 
 #ifndef CONSOLE_ROUGELIKE_GAME_STRUCTURES_H
 #define CONSOLE_ROUGELIKE_GAME_STRUCTURES_H
+#include <memory>
+
 typedef struct Point{
     int x;
     int y;

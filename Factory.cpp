@@ -1,4 +1,5 @@
 #include "Factory.h"
+#include <iostream>
 
 Factory::Factory() {
     this->CreatorMap['K'] = std::make_unique<ObjectCreator<Knight>>();
@@ -9,5 +10,10 @@ Factory::Factory() {
 }
 
 std::unique_ptr<GameObject> Factory::createObjectFromSym(const char &sym, const Point &pos) {
-    this->CreatorMap[sym]->Create(pos);
+    if (this->CreatorMap.count(sym)){
+        return this->CreatorMap[sym]->Create(pos);
+    }
+    else{
+        return nullptr;
+    }
 }

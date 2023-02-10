@@ -1,9 +1,8 @@
 #include "iostream"
-#include "Map.h"
-#include <iostream>
+#include "GameLoop.h"
+
 
 int main(){
-    Map map("/Users/ivan/Desktop/egor_learning/github/console-rougelike-game/map.txt");
-    std::cout << map << std::endl;
+    GameLoop g_l;
     return 0;
 }

@@ -8,6 +8,7 @@ private:
 public:
     Point GetPos() { return coordinates; };
     char GetSym() const { return sym; };
+    virtual ~GameObject() = default;
 protected:
     void SetPos(Point pos){
         this->coordinates = pos;
