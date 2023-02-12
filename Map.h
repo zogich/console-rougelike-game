@@ -16,6 +16,7 @@ public:
     Map(const std::string &path_to_config_file);
     std::vector<std::vector<Tile>> getTiles() const;
     objectPool* getPool();
+    void drawMap();
 };
 std::ostream& operator << (std::ostream &os, const Map &map);
 

@@ -5,6 +5,7 @@
 #include "Map.h"
 #include <fstream>
 #include <iostream>
+#include <ncurses.h>
 
 Map::Map(const std::string &path_to_config_file) {
     std::ifstream file(path_to_config_file);
@@ -37,6 +38,18 @@ objectPool* Map::getPool() {
     return &this->pool;
 }
 
+void Map::drawMap() {
+    std::string map_matrix = "";
+    for ( const auto& line: this->tiles ){
+        for ( auto tile: line ){
+            map_matrix += tile.sym;
+        }
+        map_matrix += '\n';
+    }
+    printw(map_matrix.c_str());
+    refresh();
+}
+
 std::ostream& operator << (std::ostream &os, const Map &map){
     for ( const auto& line: map.getTiles() ){
         for ( auto tile: line ){
@@ -46,3 +59,5 @@ std::ostream& operator << (std::ostream &os, const Map &map){
     }
     return os;
 }
+
+
