@@ -9,14 +9,14 @@
 
 class AbstractCreator {
 public:
-    virtual std::unique_ptr<GameObject> Create(const Point &pos) = 0;
+    virtual GameObject* Create(const Point &pos) = 0;
 };
 
 template <class Object>
 class ObjectCreator : public AbstractCreator {
 public:
-    std::unique_ptr<GameObject> Create(const Point &pos) override{
-        return std::make_unique<Object>(pos);
+    GameObject* Create(const Point &pos) override{
+        return new Object(pos);
     }
 };
 
@@ -25,7 +25,7 @@ class Factory{
        std::map<char, std::unique_ptr<AbstractCreator>> CreatorMap;
     public:
         Factory();
-        std::unique_ptr<GameObject> createObjectFromSym(const char &sym, const Point &pos);
+        GameObject* createObjectFromSym(const char &sym, const Point &pos);
 };
 
 

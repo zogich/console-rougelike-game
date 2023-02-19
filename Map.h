@@ -5,7 +5,7 @@
 #include "objects/structures.h"
 #include "Factory.h"
 
-typedef std::map<char, std::vector<std::unique_ptr<GameObject>>> objectPool;
+typedef std::map<char, std::vector<std::shared_ptr<GameObject>>> objectPool;
 
 class Map {
 private:
@@ -17,6 +17,7 @@ public:
     std::vector<std::vector<Tile>> getTiles() const;
     objectPool* getPool();
     void drawMap();
+    void updateObjectsPosTiles();
 };
 std::ostream& operator << (std::ostream &os, const Map &map);
 

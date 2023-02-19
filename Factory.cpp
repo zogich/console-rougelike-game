@@ -9,7 +9,7 @@ Factory::Factory() {
     this->CreatorMap['#'] = std::make_unique<ObjectCreator<Wall>>();
 }
 
-std::unique_ptr<GameObject> Factory::createObjectFromSym(const char &sym, const Point &pos) {
+GameObject* Factory::createObjectFromSym(const char &sym, const Point &pos) {
     if (this->CreatorMap.count(sym)){
         return this->CreatorMap[sym]->Create(pos);
     }

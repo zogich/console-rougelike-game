@@ -18,9 +18,8 @@ Map::Map(const std::string &path_to_config_file) {
         for (char sym: line){
             this->tiles.back().emplace_back(Tile(Point{line_count, column_count},  sym));
 
-            // ToDo rewrite object creation
             if (sym != '.'){
-                this->pool[sym].push_back(this->factory->createObjectFromSym(sym, {line_count, column_count}));
+                this->pool[sym].push_back(std::unique_ptr<GameObject>(this->factory->createObjectFromSym(sym, {line_count, column_count})));
             }
 
             column_count++;
@@ -37,6 +36,7 @@ std::vector<std::vector<Tile>> Map::getTiles() const {
 objectPool* Map::getPool() {
     return &this->pool;
 }
+
 
 void Map::drawMap() {
     std::string map_matrix = "";
