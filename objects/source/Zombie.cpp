@@ -18,3 +18,7 @@ int Zombie::GetDamage() {
 void Zombie::TakeDamage(const int &dmg) {
     this->hp -= dmg;
 }
+
+void Zombie::OnGameTick() {
+
+}

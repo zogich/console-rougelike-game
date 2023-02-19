@@ -1,6 +1,5 @@
 #include "GameLoop.h"
 #include <string>
-#include <iostream>
 #include <ncurses.h>
 
 
@@ -12,7 +11,11 @@ GameLoop::GameLoop() {
 
 void GameLoop::startLoop() {
     initscr();
+    noecho();
+    nodelay(stdscr, TRUE);
     this->map->drawMap();
-    getch();
+    while (true){
+        char key = getch();
+    }
     endwin();
 }

@@ -1,6 +1,3 @@
-//
-// Created by иван on 30.01.2023.
-//
 
 #include "objects/Objects.h"
 Dragon::Dragon(const Point &pos) {
@@ -16,4 +13,7 @@ int Dragon::GetDamage() {
 
 void Dragon::TakeDamage(const int &dmg) {
     this->hp -= dmg;
+}
+
+void Dragon::OnGameTick() {
 }

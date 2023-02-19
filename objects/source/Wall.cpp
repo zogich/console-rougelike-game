@@ -8,3 +8,7 @@ Wall::Wall(const Point &pos) {
     this->SetSym('#');
     this->SetPos(pos);
 }
+
+void Wall::OnGameTick() {
+
+}

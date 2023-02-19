@@ -10,5 +10,7 @@ Princess::Princess(const Point &pos) {
 }
 
 void Princess::TakeDamage(const int &damage) {
-    return;
+}
+
+void Princess::OnGameTick() {
 }
