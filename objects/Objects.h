@@ -1,3 +1,6 @@
+
+#ifndef CONSOLE_ROUGELIKE_GAME_OBJECTS_H
+#define CONSOLE_ROUGELIKE_GAME_OBJECTS_H
 #include "objects/structures.h"
 
 
@@ -69,3 +72,4 @@ public:
     void TakeDamage(const int &damage) override;
     void OnGameTick() override;
 };
+#endif

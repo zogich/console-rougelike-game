@@ -10,6 +10,7 @@
 class AbstractCreator {
 public:
     virtual GameObject* Create(const Point &pos) = 0;
+    virtual ~AbstractCreator() = default;
 };
 
 template <class Object>
