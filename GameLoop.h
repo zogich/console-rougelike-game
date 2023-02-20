@@ -12,6 +12,7 @@ class GameLoop {
 private:
     std::unique_ptr<Map> map;
     objectPool *pool;
+    std::unique_ptr<GameTick> game_tick;
 public:
     GameLoop();
     void startLoop();
