@@ -1,5 +1,8 @@
 
+#include <ncurses.h>
 #include "objects/Objects.h"
+#include <iostream>
+
 Knight::Knight(const Point &pos) {
     this->SetSym('K');
     this->SetPos(pos);
@@ -15,4 +18,20 @@ void Knight::TakeDamage(const int &damage) {
 }
 
 void Knight::OnGameTick() {
+    char key = getch();
+   //ToDo rewrite character control way
+    switch (key){
+        case 'w':
+            this->SetPos({this->GetPos().x, this->GetPos().y-1});
+            break;
+        case 's':
+            this->SetPos({this->GetPos().x, this->GetPos().y+1});
+            break;
+        case 'a':
+            this->SetPos({this->GetPos().x-1, this->GetPos().y});
+            break;
+        case 'd':
+            this->SetPos({this->GetPos().x+1, this->GetPos().y});
+            break;
+    }
 }

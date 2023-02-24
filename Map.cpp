@@ -16,10 +16,10 @@ Map::Map(const std::string &path_to_config_file) {
         int column_count = 0;
         this->tiles.emplace_back(std::vector<Tile>());
         for (char sym: line){
-            this->tiles.back().emplace_back(Tile(Point{line_count, column_count},  sym));
+            this->tiles.back().emplace_back(Tile(Point{ column_count, line_count},  sym));
 
             if (sym != '.'){
-                this->pool[sym].push_back(std::unique_ptr<GameObject>(this->factory->createObjectFromSym(sym, {line_count, column_count})));
+                this->pool[sym].push_back(std::unique_ptr<GameObject>(this->factory->createObjectFromSym(sym, {column_count, line_count})));
             }
 
             column_count++;
@@ -39,6 +39,7 @@ objectPool* Map::getPool() {
 
 
 void Map::drawMap() {
+    clear();
     std::string map_matrix = "";
     for ( const auto& line: this->tiles ){
         for ( auto tile: line ){
@@ -48,6 +49,21 @@ void Map::drawMap() {
     }
     printw(map_matrix.c_str());
     refresh();
+}
+
+void Map::updateObjectsPosTiles() {
+
+    for ( auto &lane: this->tiles ){
+        for ( auto &tile: lane ){
+            tile.sym = '.';
+        }
+    }
+
+    for (const auto& map_object: this->pool) {
+        for (const auto& object: map_object.second) {
+            this->tiles[object->GetPos().y][object->GetPos().x].sym = object->GetSym();
+        }
+    }
 }
 
 std::ostream& operator << (std::ostream &os, const Map &map){

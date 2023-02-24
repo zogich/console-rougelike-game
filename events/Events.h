@@ -18,6 +18,7 @@ public:
 
 
 class GameTick : public AbstractEvent<GameObject>{
+public:
     void callEvent() override {
         for (auto &object: this->observers ){
             object->OnGameTick();
