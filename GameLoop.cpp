@@ -7,9 +7,10 @@ GameLoop::GameLoop() {
     this->pool = this->map->getPool();
 
     this->game_tick = std::make_unique<GameTick>();
-    for (auto one_map: *this->pool){
-        for ( auto object: one_map.second ){
-            this->game_tick->subscribe(object);
+
+    for (auto &one_map: *this->pool){
+        for ( auto &object: one_map.second ){
+            this->game_tick->subscribe(&(*object));
         }
     }
 

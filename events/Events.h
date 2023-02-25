@@ -7,10 +7,10 @@
 template<class ObjectType>
 class AbstractEvent{
 protected:
-    std::vector<std::shared_ptr<ObjectType>> observers;
+    std::vector<ObjectType*> observers;
 public:
-    void subscribe(std::shared_ptr<ObjectType> &method_for_trigger_event){
-      this->observers.push_back(method_for_trigger_event);
+    void subscribe(ObjectType *subscriber){
+      this->observers.push_back(subscriber);
     }
     virtual void callEvent() = 0;
 };
