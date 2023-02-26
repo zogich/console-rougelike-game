@@ -7,6 +7,9 @@ GameLoop::GameLoop() {
     this->pool = this->map->getPool();
 
     this->game_tick = std::make_unique<GameTick>();
+    this->signal_upd_obj_pos = std::make_unique<SignalForUpdateObjectPositionOnMap>();
+    this->signal_upd_obj_pos->subscribe(&(*this->map));
+    Character::setSignalUpdPos(&*this->signal_upd_obj_pos);
 
     for (auto &one_map: *this->pool){
         for ( auto &object: one_map.second ){
@@ -23,7 +26,6 @@ void GameLoop::startLoop() {
     this->map->drawMap();
     while (true){
         this->game_tick->callEvent();
-        this->map->updateObjectsPosTiles();
         this->map->drawMap();
     }
     endwin();

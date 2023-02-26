@@ -3,6 +3,8 @@
 #define CONSOLE_ROUGELIKE_GAME_OBJECTS_H
 #include "objects/structures.h"
 
+class SignalForUpdateObjectPositionOnMap;
+
 
 class GameObject {
 private:
@@ -30,10 +32,16 @@ public:
 
 class Character : public GameObject{
 public:
-    int GetHp(){ return this->hp; };
+    int GetHp() const{ return this->hp; };
     virtual void TakeDamage(const int &damage) = 0;
+    static void setSignalUpdPos(SignalForUpdateObjectPositionOnMap *signal){
+        signal_upd_pos = signal;
+    };
+
 protected:
     int hp;
+    static SignalForUpdateObjectPositionOnMap *signal_upd_pos;
+
 };
 
 class Knight : public Character{

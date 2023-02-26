@@ -18,6 +18,7 @@ public:
     objectPool* getPool();
     void drawMap();
     void updateObjectsPosTiles();
+    void moveObjectSym(const Point &old_pos, const Point &new_pos, const char &sym);
 };
 std::ostream& operator << (std::ostream &os, const Map &map);
 

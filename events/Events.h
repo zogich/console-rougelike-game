@@ -4,6 +4,9 @@
 #include "objects/Objects.h"
 #include <vector>
 
+class Map;
+
+
 template<class ObjectType>
 class AbstractEvent{
 protected:
@@ -24,6 +27,12 @@ public:
             object->OnGameTick();
         }
     }
+};
+
+class SignalForUpdateObjectPositionOnMap: public AbstractEvent<Map>{
+public:
+    void callEvent() override{};
+    void callEvent(const Point &old_pos, const Point &new_pos, const char &sym);
 };
 
 #endif

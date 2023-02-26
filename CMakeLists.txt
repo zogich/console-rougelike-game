@@ -10,6 +10,6 @@ include_directories(${CURSES_INCLUDE_DIR})
 
 add_executable(console_rougelike_game
         main.cpp objects/structures.h objects/source/Knight.cpp objects/source/Princess.cpp objects/source/Zombie.cpp objects/source/Dragon.cpp objects/source/Wall.cpp
-        Map.cpp Map.h GameLoop.h GameLoop.cpp Factory.cpp Factory.h objects/Objects.h events/Events.h)
+        Map.cpp Map.h GameLoop.h GameLoop.cpp Factory.cpp Factory.h objects/Objects.h events/Events.h events/Events.cpp objects/source/Character.cpp)
 
 target_link_libraries(console_rougelike_game ${CURSES_LIBRARIES})

@@ -66,6 +66,11 @@ void Map::updateObjectsPosTiles() {
     }
 }
 
+void Map::moveObjectSym(const Point &old_pos, const Point &new_pos, const char &sym) {
+    this->tiles[old_pos.y][old_pos.x].sym = '.';
+    this->tiles[new_pos.y][new_pos.x].sym = sym;
+}
+
 std::ostream& operator << (std::ostream &os, const Map &map){
     for ( const auto& line: map.getTiles() ){
         for ( auto tile: line ){
