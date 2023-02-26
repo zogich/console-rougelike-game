@@ -32,7 +32,7 @@ public:
 class SignalForUpdateObjectPositionOnMap: public AbstractEvent<Map>{
 public:
     void callEvent() override{};
-    void callEvent(const Point &old_pos, const Point &new_pos, const char &sym);
+    bool callEvent(const Point &old_pos, const Point &new_pos, const char &sym);
 };
 
 #endif

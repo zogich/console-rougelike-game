@@ -37,6 +37,7 @@ public:
     static void setSignalUpdPos(SignalForUpdateObjectPositionOnMap *signal){
         signal_upd_pos = signal;
     };
+    void movePosWithOffset(const int &x_offset, const int &y_offset);
 
 protected:
     int hp;

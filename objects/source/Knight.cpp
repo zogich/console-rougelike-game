@@ -15,7 +15,7 @@ Knight::Knight(const Point &pos) {
 int Knight::GetSelfDamage() {
     return this->damage;
 }
-void Knight::TakeDamage(const int &damage) {
+void Knight::TakeDamage(const int &dmg) {
     this->hp -= damage;
 }
 
@@ -25,20 +25,16 @@ void Knight::OnGameTick() {
     Point old_pos = this->GetPos();
     switch (key){
         case 'w':
-            this->SetPos({this->GetPos().x, this->GetPos().y-1});
-            Character::signal_upd_pos->callEvent(old_pos, this->GetPos(), this->GetSym());
+            this->movePosWithOffset(0, -1);
             break;
         case 's':
-            this->SetPos({this->GetPos().x, this->GetPos().y+1});
-            Character::signal_upd_pos->callEvent(old_pos, this->GetPos(), this->GetSym());
+            this->movePosWithOffset(0, 1);
             break;
         case 'a':
-            this->SetPos({this->GetPos().x-1, this->GetPos().y});
-            Character::signal_upd_pos->callEvent(old_pos, this->GetPos(), this->GetSym());
+            this->movePosWithOffset(-1, 0);
             break;
         case 'd':
-            this->SetPos({this->GetPos().x+1, this->GetPos().y});
-            Character::signal_upd_pos->callEvent(old_pos, this->GetPos(), this->GetSym());
+            this->movePosWithOffset(1, 0);
             break;
     }
 }
