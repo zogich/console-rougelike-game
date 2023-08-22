@@ -14,6 +14,9 @@ public:
     Point GetPos() { return coordinates; };
     char GetSym() const { return sym; };
     virtual ~GameObject() = default;
+    /**
+     * @brief Виртуальный метод, описывающий поведение объекта на каждый тик игры
+     */
     virtual void OnGameTick() = 0;
 protected:
     void SetPos(Point pos){
@@ -33,14 +36,29 @@ public:
 class Character : public GameObject{
 public:
     int GetHp() const{ return this->hp; };
+
+    //! @brief метод, описывающий получение урона персонажем
     virtual void TakeDamage(const int &damage) = 0;
+
+    /**
+     * @brief устанавливает статическое свойство Character.signal_upd_pos , по которому должна обновляться позиция <br>
+     * @param signal сигнал, по которому все персонажи на карте должны обновить позицию.
+     */
     static void setSignalUpdPos(SignalForUpdateObjectPositionOnMap *signal){
         signal_upd_pos = signal;
     };
+
+    /**
+     * @brief изменяет текущую позицию персонажа по заданным отступам <br>
+     * внутри метод имеет проверку на корректность изменения позиции.
+     * @param x_offset отступ по x
+     * @param y_offset отступ по y
+     */
     void movePosWithOffset(const int &x_offset, const int &y_offset);
 
 protected:
     int hp;
+    //! Сигнал, по которому персонаж должен обновить свою позицию на карте.
     static SignalForUpdateObjectPositionOnMap *signal_upd_pos;
 
 };

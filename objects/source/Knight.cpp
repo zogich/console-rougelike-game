@@ -12,9 +12,15 @@ Knight::Knight(const Point &pos) {
     this->damage = 1;
 }
 
+/**
+ *
+ * @return возвращает урон рыцаря
+ */
 int Knight::GetSelfDamage() {
     return this->damage;
 }
+
+
 void Knight::TakeDamage(const int &dmg) {
     this->hp -= damage;
 }

@@ -1,10 +1,9 @@
-//
-// Created by иван on 29.01.2023.
-//
 
 #ifndef CONSOLE_ROUGELIKE_GAME_STRUCTURES_H
 #define CONSOLE_ROUGELIKE_GAME_STRUCTURES_H
 #include <memory>
+
+class GameObject;
 
 typedef struct Point{
     int x;
@@ -18,6 +17,7 @@ typedef struct Tile{
         this->pos = position;
         this->sym = symbol;
     };
+
 }Tile;
 
 #endif //CONSOLE_ROUGELIKE_GAME_STRUCTURES_H
