@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>console-rougelike-game: AbstractEvent&lt; ObjectType &gt; Class Template Reference</title>
+<title>My Project: AbstractEvent&lt; ObjectType &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">console-rougelike-game<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -76,14 +76,19 @@ $(function() {
   <div class="headertitle"><div class="title">AbstractEvent&lt; ObjectType &gt; Class Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Абстрактное событие, от которого наследуются все прочие события. Реализует паттерн Observer.  
+ <a href="class_abstract_event.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_events_8h_source.html">Events.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1d4f125a7497a37eb1855b54c5e8ff3e"><td class="memItemLeft" align="right" valign="top"><a id="a1d4f125a7497a37eb1855b54c5e8ff3e" name="a1d4f125a7497a37eb1855b54c5e8ff3e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>subscribe</b> (ObjectType *subscriber)</td></tr>
+<tr class="memitem:a1d4f125a7497a37eb1855b54c5e8ff3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_event.html#a1d4f125a7497a37eb1855b54c5e8ff3e">subscribe</a> (ObjectType *subscriber)</td></tr>
+<tr class="memdesc:a1d4f125a7497a37eb1855b54c5e8ff3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, реализующий подписку игрового объекта на событие.  <br /></td></tr>
 <tr class="separator:a1d4f125a7497a37eb1855b54c5e8ff3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcffe4fe5e47878d248525b479e2251f"><td class="memItemLeft" align="right" valign="top"><a id="abcffe4fe5e47878d248525b479e2251f" name="abcffe4fe5e47878d248525b479e2251f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>callEvent</b> ()=0</td></tr>
+<tr class="memitem:abcffe4fe5e47878d248525b479e2251f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_event.html#abcffe4fe5e47878d248525b479e2251f">callEvent</a> ()=0</td></tr>
+<tr class="memdesc:abcffe4fe5e47878d248525b479e2251f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виртуальный метод, описывающий действия при вызове события.  <br /></td></tr>
 <tr class="separator:abcffe4fe5e47878d248525b479e2251f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -92,6 +97,77 @@ Protected Attributes</h2></td></tr>
 std::vector&lt; ObjectType * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>observers</b></td></tr>
 <tr class="separator:aa38ab761ce8a5da38225289e3312b96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><div class="compoundTemplParams">template&lt;class ObjectType&gt;<br />
+class AbstractEvent&lt; ObjectType &gt;</div><p>Абстрактное событие, от которого наследуются все прочие события. Реализует паттерн Observer. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="abcffe4fe5e47878d248525b479e2251f" name="abcffe4fe5e47878d248525b479e2251f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcffe4fe5e47878d248525b479e2251f">&#9670;&#160;</a></span>callEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ObjectType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_abstract_event.html">AbstractEvent</a>&lt; ObjectType &gt;::callEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Виртуальный метод, описывающий действия при вызове события. </p>
+
+<p>Implemented in <a class="el" href="class_game_tick.html#ae862a9a66baf349a7cb5886e28bad0f2">GameTick</a>, and <a class="el" href="class_signal_for_update_object_position_on_map.html#ad688d5ede06e18660613818aa0bdfe8b">SignalForUpdateObjectPositionOnMap</a>.</p>
+
+</div>
+</div>
+<a id="a1d4f125a7497a37eb1855b54c5e8ff3e" name="a1d4f125a7497a37eb1855b54c5e8ff3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4f125a7497a37eb1855b54c5e8ff3e">&#9670;&#160;</a></span>subscribe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class ObjectType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_abstract_event.html">AbstractEvent</a>&lt; ObjectType &gt;::subscribe </td>
+          <td>(</td>
+          <td class="paramtype">ObjectType *&#160;</td>
+          <td class="paramname"><em>subscriber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Метод, реализующий подписку игрового объекта на событие. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">subscriber</td><td>Игровой объект, который будет реагировать на событие. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/Users/ivan/Desktop/egor_learning/github/console-rougelike-game/events/<a class="el" href="_events_8h_source.html">Events.h</a></li>
 </ul>

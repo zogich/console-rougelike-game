@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['moveposwithoffset_0',['movePosWithOffset',['../class_character.html#a39101a234028fc4b00af8ecc464e6b44',1,'Character']]]
+  ['getselfdamage_0',['GetSelfDamage',['../class_knight.html#a790897c415dce1c705531922319ec4dd',1,'Knight']]]
 ];

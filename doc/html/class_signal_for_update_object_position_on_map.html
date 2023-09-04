@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>console-rougelike-game: SignalForUpdateObjectPositionOnMap Class Reference</title>
+<title>My Project: SignalForUpdateObjectPositionOnMap Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">console-rougelike-game<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -75,6 +75,11 @@ $(function() {
   <div class="headertitle"><div class="title">SignalForUpdateObjectPositionOnMap Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Событие, вызываемое когда игровой объект должен поменять свою позицию.  
+ <a href="class_signal_for_update_object_position_on_map.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_events_8h_source.html">Events.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SignalForUpdateObjectPositionOnMap:</div>
 <div class="dyncontent">
@@ -88,16 +93,17 @@ Inheritance diagram for SignalForUpdateObjectPositionOnMap:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad688d5ede06e18660613818aa0bdfe8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_for_update_object_position_on_map.html#ad688d5ede06e18660613818aa0bdfe8b">callEvent</a> () override</td></tr>
+<tr class="memdesc:ad688d5ede06e18660613818aa0bdfe8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виртуальный метод, описывающий действия при вызове события.  <br /></td></tr>
 <tr class="separator:ad688d5ede06e18660613818aa0bdfe8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0323c5d4f4d9f72c1cbad5149a956da"><td class="memItemLeft" align="right" valign="top"><a id="ab0323c5d4f4d9f72c1cbad5149a956da" name="ab0323c5d4f4d9f72c1cbad5149a956da"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>callEvent</b> (const <a class="el" href="struct_point.html">Point</a> &amp;old_pos, const <a class="el" href="struct_point.html">Point</a> &amp;new_pos, const char &amp;sym)</td></tr>
+<tr class="memitem:ab0323c5d4f4d9f72c1cbad5149a956da"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_signal_for_update_object_position_on_map.html#ab0323c5d4f4d9f72c1cbad5149a956da">callEvent</a> (const <a class="el" href="struct_point.html">Point</a> &amp;old_pos, const <a class="el" href="struct_point.html">Point</a> &amp;new_pos, const char &amp;sym)</td></tr>
+<tr class="memdesc:ab0323c5d4f4d9f72c1cbad5149a956da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод выполняет проверку, на возможность передвжения игрового объекта, и если это возможно, перемещает символ объекта на карте. Саму позицию объекта он не меняет.  <br /></td></tr>
 <tr class="separator:ab0323c5d4f4d9f72c1cbad5149a956da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_abstract_event"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_abstract_event')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_abstract_event.html">AbstractEvent&lt; Map &gt;</a></td></tr>
-<tr class="memitem:a1d4f125a7497a37eb1855b54c5e8ff3e inherit pub_methods_class_abstract_event"><td class="memItemLeft" align="right" valign="top">
-void&#160;</td><td class="memItemRight" valign="bottom"><b>subscribe</b> (<a class="el" href="class_map.html">Map</a> *subscriber)</td></tr>
+<tr class="memitem:a1d4f125a7497a37eb1855b54c5e8ff3e inherit pub_methods_class_abstract_event"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_event.html#a1d4f125a7497a37eb1855b54c5e8ff3e">subscribe</a> (<a class="el" href="class_map.html">Map</a> *subscriber)</td></tr>
+<tr class="memdesc:a1d4f125a7497a37eb1855b54c5e8ff3e inherit pub_methods_class_abstract_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, реализующий подписку игрового объекта на событие.  <br /></td></tr>
 <tr class="separator:a1d4f125a7497a37eb1855b54c5e8ff3e inherit pub_methods_class_abstract_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcffe4fe5e47878d248525b479e2251f inherit pub_methods_class_abstract_event"><td class="memItemLeft" align="right" valign="top">
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>callEvent</b> ()=0</td></tr>
+<tr class="memitem:abcffe4fe5e47878d248525b479e2251f inherit pub_methods_class_abstract_event"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_abstract_event.html#abcffe4fe5e47878d248525b479e2251f">callEvent</a> ()=0</td></tr>
+<tr class="memdesc:abcffe4fe5e47878d248525b479e2251f inherit pub_methods_class_abstract_event"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виртуальный метод, описывающий действия при вызове события.  <br /></td></tr>
 <tr class="separator:abcffe4fe5e47878d248525b479e2251f inherit pub_methods_class_abstract_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="inherited" name="inherited"></a>
@@ -107,9 +113,11 @@ Additional Inherited Members</h2></td></tr>
 std::vector&lt; <a class="el" href="class_map.html">Map</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>observers</b></td></tr>
 <tr class="separator:aa38ab761ce8a5da38225289e3312b96c inherit pro_attribs_class_abstract_event"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Событие, вызываемое когда игровой объект должен поменять свою позицию. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad688d5ede06e18660613818aa0bdfe8b" name="ad688d5ede06e18660613818aa0bdfe8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad688d5ede06e18660613818aa0bdfe8b">&#9670;&#160;</a></span>callEvent()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad688d5ede06e18660613818aa0bdfe8b">&#9670;&#160;</a></span>callEvent() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -131,7 +139,53 @@ std::vector&lt; <a class="el" href="class_map.html">Map</a> * &gt;&#160;</td><td
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_abstract_event.html">AbstractEvent&lt; Map &gt;</a>.</p>
+<p>Виртуальный метод, описывающий действия при вызове события. </p>
+
+<p>Implements <a class="el" href="class_abstract_event.html#abcffe4fe5e47878d248525b479e2251f">AbstractEvent&lt; Map &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ab0323c5d4f4d9f72c1cbad5149a956da" name="ab0323c5d4f4d9f72c1cbad5149a956da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0323c5d4f4d9f72c1cbad5149a956da">&#9670;&#160;</a></span>callEvent() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SignalForUpdateObjectPositionOnMap::callEvent </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>old_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>new_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char &amp;&#160;</td>
+          <td class="paramname"><em>sym</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод выполняет проверку, на возможность передвжения игрового объекта, и если это возможно, перемещает символ объекта на карте. Саму позицию объекта он не меняет. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">old_pos</td><td>Старая позиция объекта на карте. </td></tr>
+    <tr><td class="paramname">new_pos</td><td>Новая позиция объекта на карте. </td></tr>
+    <tr><td class="paramname">sym</td><td>Символ объекта на карте. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
