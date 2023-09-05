@@ -6,7 +6,7 @@
 #include <map>
 #include "objects/Objects.h"
 
-
+//!
 class AbstractCreator {
 public:
     virtual GameObject* Create(const Point &pos) = 0;
