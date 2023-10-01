@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getselfdamage_0',['GetSelfDamage',['../class_knight.html#a790897c415dce1c705531922319ec4dd',1,'Knight']]]
+  ['drawmap_0',['drawMap',['../class_map.html#ae206cb92ab2c008e89fbc070dfcbd63e',1,'Map']]]
 ];

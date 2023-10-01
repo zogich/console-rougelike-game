@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['moveposwithoffset_0',['movePosWithOffset',['../class_character.html#a39101a234028fc4b00af8ecc464e6b44',1,'Character']]]
+  ['getpool_0',['getPool',['../class_map.html#a305eec27d8d0ecd1404bfb159162e01d',1,'Map']]],
+  ['getselfdamage_1',['GetSelfDamage',['../class_knight.html#a790897c415dce1c705531922319ec4dd',1,'Knight']]],
+  ['gettiles_2',['getTiles',['../class_map.html#ac40e1ee800eda79f60da301ecf531edb',1,'Map']]]
 ];

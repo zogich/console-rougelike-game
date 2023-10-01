@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Map Class Reference</title>
+<title>console_rougelike_game: Map Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">console_rougelike_game
    </div>
   </td>
  </tr>
@@ -75,28 +75,107 @@ $(function() {
   <div class="headertitle"><div class="title">Map Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Карта игрового мира.  
+ <a href="class_map.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_map_8h_source.html">Map.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ace151cc3abd2b3fae11c89547c1ec9a4"><td class="memItemLeft" align="right" valign="top"><a id="ace151cc3abd2b3fae11c89547c1ec9a4" name="ace151cc3abd2b3fae11c89547c1ec9a4"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Map</b> (const std::string &amp;path_to_config_file)</td></tr>
+<tr class="memitem:ace151cc3abd2b3fae11c89547c1ec9a4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ace151cc3abd2b3fae11c89547c1ec9a4">Map</a> (const std::string &amp;path_to_config_file)</td></tr>
 <tr class="separator:ace151cc3abd2b3fae11c89547c1ec9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac40e1ee800eda79f60da301ecf531edb"><td class="memItemLeft" align="right" valign="top"><a id="ac40e1ee800eda79f60da301ecf531edb" name="ac40e1ee800eda79f60da301ecf531edb"></a>
 std::vector&lt; std::vector&lt; <a class="el" href="struct_tile.html">Tile</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getTiles</b> () const</td></tr>
+<tr class="memdesc:ac40e1ee800eda79f60da301ecf531edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает двумерный массив "плиток" карты. <br /></td></tr>
 <tr class="separator:ac40e1ee800eda79f60da301ecf531edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a305eec27d8d0ecd1404bfb159162e01d"><td class="memItemLeft" align="right" valign="top"><a id="a305eec27d8d0ecd1404bfb159162e01d" name="a305eec27d8d0ecd1404bfb159162e01d"></a>
 objectPool *&#160;</td><td class="memItemRight" valign="bottom"><b>getPool</b> ()</td></tr>
+<tr class="memdesc:a305eec27d8d0ecd1404bfb159162e01d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает список объектов расположенных на карте. <br /></td></tr>
 <tr class="separator:a305eec27d8d0ecd1404bfb159162e01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae206cb92ab2c008e89fbc070dfcbd63e"><td class="memItemLeft" align="right" valign="top"><a id="ae206cb92ab2c008e89fbc070dfcbd63e" name="ae206cb92ab2c008e89fbc070dfcbd63e"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>drawMap</b> ()</td></tr>
+<tr class="memdesc:ae206cb92ab2c008e89fbc070dfcbd63e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отрисовка карты. <br /></td></tr>
 <tr class="separator:ae206cb92ab2c008e89fbc070dfcbd63e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45706f3f7f3a55c8981dfb546521d2fe"><td class="memItemLeft" align="right" valign="top"><a id="a45706f3f7f3a55c8981dfb546521d2fe" name="a45706f3f7f3a55c8981dfb546521d2fe"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>updateObjectsPosTiles</b> ()</td></tr>
 <tr class="separator:a45706f3f7f3a55c8981dfb546521d2fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad367575ab5d22fee83ed5f2e55d60eb5"><td class="memItemLeft" align="right" valign="top"><a id="ad367575ab5d22fee83ed5f2e55d60eb5" name="ad367575ab5d22fee83ed5f2e55d60eb5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>moveObjectSym</b> (const <a class="el" href="struct_point.html">Point</a> &amp;old_pos, const <a class="el" href="struct_point.html">Point</a> &amp;new_pos, const char &amp;sym)</td></tr>
+<tr class="memitem:ad367575ab5d22fee83ed5f2e55d60eb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ad367575ab5d22fee83ed5f2e55d60eb5">moveObjectSym</a> (const <a class="el" href="struct_point.html">Point</a> &amp;old_pos, const <a class="el" href="struct_point.html">Point</a> &amp;new_pos, const char &amp;sym)</td></tr>
+<tr class="memdesc:ad367575ab5d22fee83ed5f2e55d60eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод, выполняющий изменение положения символа объекта на карте.  <br /></td></tr>
 <tr class="separator:ad367575ab5d22fee83ed5f2e55d60eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Карта игрового мира. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ace151cc3abd2b3fae11c89547c1ec9a4" name="ace151cc3abd2b3fae11c89547c1ec9a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace151cc3abd2b3fae11c89547c1ec9a4">&#9670;&#160;</a></span>Map()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Map::Map </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>path_to_config_file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path_to_config_file</td><td>Путь к файлу, в котором записана конфигурация карты. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ad367575ab5d22fee83ed5f2e55d60eb5" name="ad367575ab5d22fee83ed5f2e55d60eb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad367575ab5d22fee83ed5f2e55d60eb5">&#9670;&#160;</a></span>moveObjectSym()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map::moveObjectSym </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>old_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>new_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char &amp;&#160;</td>
+          <td class="paramname"><em>sym</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод, выполняющий изменение положения символа объекта на карте. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sym</td><td>Символ который надо переместить. </td></tr>
+    <tr><td class="paramname">old_pos</td><td>Прежняя позиция символа. </td></tr>
+    <tr><td class="paramname">new_pos</td><td>Новая позиция символа. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/ivan/Desktop/egor_learning/github/console-rougelike-game/<a class="el" href="_map_8h_source.html">Map.h</a></li>
 <li>/Users/ivan/Desktop/egor_learning/github/console-rougelike-game/Map.cpp</li>

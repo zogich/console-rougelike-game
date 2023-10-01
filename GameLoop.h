@@ -6,7 +6,7 @@
 #include "Map.h"
 #include "events/Events.h"
 
-
+//! @brief Основной цикл игры, в котором происходят все игровые события.
 class GameLoop {
 private:
     std::unique_ptr<Map> map;
@@ -15,6 +15,8 @@ private:
     std::unique_ptr<SignalForUpdateObjectPositionOnMap> signal_upd_obj_pos;
 public:
     GameLoop();
+
+    //! @brief Метод, запускающий цикл.
     void startLoop();
     
 };

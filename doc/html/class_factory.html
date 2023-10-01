@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Factory Class Reference</title>
+<title>console_rougelike_game: Factory Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">My Project
+   <div id="projectname">console_rougelike_game
    </div>
   </td>
  </tr>
@@ -75,13 +75,58 @@ $(function() {
   <div class="headertitle"><div class="title">Factory Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Фабрика, заполняющая карту объектами.  
+ <a href="class_factory.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_factory_8h_source.html">Factory.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9ec80cc89755b53e7cbd1ded907cde81"><td class="memItemLeft" align="right" valign="top"><a id="a9ec80cc89755b53e7cbd1ded907cde81" name="a9ec80cc89755b53e7cbd1ded907cde81"></a>
-<a class="el" href="class_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>createObjectFromSym</b> (const char &amp;sym, const <a class="el" href="struct_point.html">Point</a> &amp;pos)</td></tr>
+<tr class="memitem:a9ec80cc89755b53e7cbd1ded907cde81"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_object.html">GameObject</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_factory.html#a9ec80cc89755b53e7cbd1ded907cde81">createObjectFromSym</a> (const char &amp;sym, const <a class="el" href="struct_point.html">Point</a> &amp;pos)</td></tr>
+<tr class="memdesc:a9ec80cc89755b53e7cbd1ded907cde81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод используемый для создания объекта.  <br /></td></tr>
 <tr class="separator:a9ec80cc89755b53e7cbd1ded907cde81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Фабрика, заполняющая карту объектами. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9ec80cc89755b53e7cbd1ded907cde81" name="a9ec80cc89755b53e7cbd1ded907cde81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ec80cc89755b53e7cbd1ded907cde81">&#9670;&#160;</a></span>createObjectFromSym()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_game_object.html">GameObject</a> * Factory::createObjectFromSym </td>
+          <td>(</td>
+          <td class="paramtype">const char &amp;&#160;</td>
+          <td class="paramname"><em>sym</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>pos</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод используемый для создания объекта. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sym</td><td>Символ объекта, который сообщает фабрике какой объект нужно создать. </td></tr>
+    <tr><td class="paramname">pos</td><td>Позиция на карте, куда должен быть помещен объект. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/Users/ivan/Desktop/egor_learning/github/console-rougelike-game/<a class="el" href="_factory_8h_source.html">Factory.h</a></li>
 <li>/Users/ivan/Desktop/egor_learning/github/console-rougelike-game/Factory.cpp</li>
